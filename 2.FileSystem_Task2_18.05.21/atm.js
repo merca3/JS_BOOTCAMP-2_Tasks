@@ -23,7 +23,8 @@ const filePath = `${process.cwd()}/atm_amount.json`;
 
 rl.question('Do you want to add (+) or withdraw (-)? ', (answer) => {
     if (answer !== '+' && answer !== '-') {
-        console.log('Start again and Please enter + or = !');
+        console.log('Please enter + or - !');
+        console.log('Start again!');
         rl.close();
     } else {
         rl.question('How much? ', (amountToChange) => {
