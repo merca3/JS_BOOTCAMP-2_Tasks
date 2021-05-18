@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+.logo img {
+    width: 100px;
+}
+
+.main-cat-cafe {
+    background-image: url('../img/Cat-Cafe.jpeg');
+    background-color: grey;
+    height: 500px;
+    background-position: center;
+}
+
+h5,
+.main-cat-cafe h1,
+h3,
+h6 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+button a,
+ul a {
+    text-decoration: none;
+    color: black
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.cat-footer {
+    background-image: url('../img/cat3.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 500px;
+}
+
+.card {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.nav li {
+    width: 120px !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.pricing {
+    background-size: cover;
+}
+
+.main-pic {
+    background-color: rgba(19, 18, 32, 0.7);
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.card-footer {
+    background-color: rgba(155, 151, 151, 0.2);
+}
