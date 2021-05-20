@@ -8,43 +8,52 @@ const rl = readline.createInterface({
 
 const filePath = `${process.cwd()}/atm_amount.json`;
 
-// const doMoney = (operator, old, toAdd) => {
-//     let newAmount;
-//     if (operator === '+') {
-//         newAmount = old + toAdd;
-//     } else if (operator === '-') {
-//         newAmount = old + toAdd;
-//     } else {
-//         console.log('Start again and Please enter + or = !');
-//     }
-//     return newAmount;
-// }
-
-
 rl.question('Do you want to add (+) or withdraw (-)? ', (answer) => {
     if (answer !== '+' && answer !== '-') {
-        console.log('Please enter + or - !');
         console.log('Start again!');
+        console.log('Please enter + or - !');
         rl.close();
+        // return;  <-- probably a better use instead of adding else
     } else {
         rl.question('How much? ', (amountToChange) => {
+            const answerAsNumber = parseFloat(amountToChange);
+            if (isNaN(amountToChange)) {
+                console.log('Please enter a number!');
+                console.log('Start again!');
+                rl.close();
+                return;
+            }
             try {
                 accessSync(filePath);
-                const jsonAmount = readFileSync(filePath, 'utf8');
-                const decodedAmount = JSON.parse(jsonAmount);
+                const jsonObject = readFileSync(filePath, 'utf8');
+                const transactions = JSON.parse(jsonObject);
+                const newLogEntry = {
+                    action: answer,
+                    amount: answerAsNumber
+                }
+                transactions.push(newLogEntry);
+                writeFileSync(filePath, JSON.stringify(transactions));
 
-                if (answer === '+') {
-                    decodedAmount.amount = decodedAmount.amount + parseInt(amountToChange);
-                } else {
-                    decodedAmount.amount = decodedAmount.amount - parseInt(amountToChange);
-                };
+                let balance = 0;
+                for (let transaction of transactions) {
+                    if (transaction.action === '+') {
+                        balance += transaction.amount;
+                    } else {
+                        balance -= transaction.amount;
+                    }
+                }
+                // if (answer === '+') {
+                //     decodedAmount.amount += parseFloat(amountToChange);
+                // } else {
+                //     decodedAmount.amount -= parseFloat(amountToChange);
+                // };
 
-                writeFileSync(filePath, JSON.stringify(decodedAmount));
-                console.log(`Current balance is: ${decodedAmount.amount}`);
+                console.log(`Current balance is: ${balance}`);
                 rl.close();
 
             } catch (err) {
                 console.error('Something went wrong', err);
+                rl.close();
             };
         })
     }

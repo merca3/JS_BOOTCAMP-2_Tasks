@@ -12,10 +12,14 @@ try {
     accessSync(filePath);
     const name = readFileSync(filePath, 'utf8');
     console.log(`Current name is: ${name}`);
-    rl.question('Please enter a new name: ', (answer) => {
-        writeFileSync(filePath, answer);
-        console.log(`New name is: ${answer}`)
-        rl.close();
+    rl.question('Please enter a new name (or "exit" to quit the app): ', (answer) => {
+        if (answer == 'exit') {
+            rl.close();
+        } else {
+            writeFileSync(filePath, answer);
+            console.log(`New name is: ${answer}`)
+            rl.close();
+        }
     });
 } catch (err) {
     console.error('Something went wrong', err)
