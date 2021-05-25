@@ -50,7 +50,7 @@ const askAge = async() => {
                 reject('Age should be a number');
                 return;
             }
-            if (parseInt(age) < 1) {
+            if (parseInt(age) < 0) {
                 reject('Age should be valid');
                 return;
             }
@@ -80,15 +80,15 @@ try {
     const adress = await askAdress();
     console.log(`The data is: ${firstName}, ${lastName}, ${email}, ${age}, ${adress}`);
 
-    accessSync(filePath);
-
     const newData = {
-        firstNameJSON: firstName,
-        lastNameJSON: lastName,
-        emailJSON: email,
-        ageJSON: age,
-        adressJSON: adress,
+        firstName,
+        lastName,
+        email,
+        age,
+        adress,
     }
+
+    accessSync(filePath);
     writeFileSync(filePath, JSON.stringify(newData));
 
 } catch (e) {
