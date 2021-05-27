@@ -1,0 +1,15 @@
+{
+    "name": "express_users",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon -L src/index.js"
+    },
+    "author": "Katrina M.",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
