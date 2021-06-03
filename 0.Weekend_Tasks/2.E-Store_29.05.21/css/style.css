@@ -1,0 +1,16 @@
+.carousel-item img {
+    max-height: 500px !important;
+    overflow: hidden;
+}
+
+.carousel-caption {
+    background-color: rgba(49, 48, 48, 0.574) !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cat-index a:hover {
+    color: #17a2b8 !important;
+}
