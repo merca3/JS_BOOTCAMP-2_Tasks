@@ -57,6 +57,9 @@ router.delete('/:id', (req, res) => {
 
 
 router.get('/:id/Products', (req, res) => {
+    // get all products
+    // iterate through them, check the category
+    // add to a new array
     const { id } = req.params;
 })
 
