@@ -19,34 +19,34 @@ function Article() {
         <div className="container">
             <h2 className="my-3">Some pretty cool article</h2>
             <div className="row">
-                <div className="col">
+                <div className="col col-12 col-md-5">
                     <div className="row">
                         <img src={mainPic} className="img-fluid" alt="catMain" />
                     </div>
                     <div className="row my-3">
                         <div className="col">
-                            <img src={Cat2} className="img-fluid"  alt="cat2"onClick={updateMainPic} />
+                            <img src={Cat2} className="img-fluid" style={{cursor: 'pointer'}} alt="cat2"onClick={updateMainPic} />
                         </div>
                         <div className="col">
-                            <img src={Cat3} className="img-fluid" alt="cat3" onClick={updateMainPic} />
+                            <img src={Cat3} className="img-fluid" style={{cursor: 'pointer'}} alt="cat3" onClick={updateMainPic} />
                         </div>
                         <div className="col">
-                            <img src={Cat4} className="img-fluid" alt="cat4" onClick={updateMainPic} />
+                            <img src={Cat4} className="img-fluid" style={{cursor: 'pointer'}} alt="cat4" onClick={updateMainPic} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col">
-                            <img src={Cat5} className="img-fluid" alt="cat5" onClick={updateMainPic} />
+                            <img src={Cat5} className="img-fluid" style={{cursor: 'pointer'}} alt="cat5" onClick={updateMainPic} />
                         </div>
                         <div className="col">
-                            <img src={Cat6} className="img-fluid" alt="cat6" onClick={updateMainPic} />
+                            <img src={Cat6} className="img-fluid" style={{cursor: 'pointer'}} alt="cat6" onClick={updateMainPic} />
                         </div>
                         <div className="col">
-                            <img src={Cat1} className="img-fluid" alt="cat1" onClick={updateMainPic} />
+                            <img src={Cat1} className="img-fluid" style={{cursor: 'pointer'}} alt="cat1" onClick={updateMainPic} />
                         </div>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col col-12 col-md-7">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut quasi quaerat. Architecto ex assumenda facere fuga voluptatibus, quisquam impedit incidunt earum porro doloribus nihil minima! Dolorum magnam reprehenderit ducimus.
                     </p>

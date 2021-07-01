@@ -15,7 +15,8 @@ function Tags() {
     
     const updateTags = (event) => {
         setTags(event.target.value);
-        setTagsDisplay(tags.split(' ').join(', '));
+        const tagsWithComa = event.target.value.replace(/ /g, ', ');
+        setTagsDisplay(tagsWithComa);
     }                
 
     const tagsElements = tagsCloud.map((tag, index) => {
