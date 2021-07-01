@@ -8,7 +8,7 @@ function AddRow() {
     const addRowBtn = () => {
         setTableRowsToAdd(tableRowsToAdd + 1);
         for (let i = 0; i <= tableRowsToAdd; i++) {
-            rowsToAdd.push(<tr><td>Row{i+3} cell1</td><td>Row{i+3} cell2</td></tr>)
+            rowsToAdd.push(<tr key={i}><td>Row{i+3} cell1</td><td>Row{i+3} cell2</td></tr>)
             setTableContent(rowsToAdd);
         }
     }
@@ -17,15 +17,17 @@ function AddRow() {
         <div>
             <h1>Task 3 - Add Row To A Table</h1>
             <table border='1'>
-                <tr>
-                    <td>Row1 cell1</td>
-                    <td>Row1 cell2</td>
-                </tr>
-                <tr>
-                    <td>Row2 cell1</td>
-                    <td>Row2 cell2</td>
-                </tr>
-                {tableContent}
+                <tbody>
+                    <tr>
+                        <td>Row1 cell1</td>
+                        <td>Row1 cell2</td>
+                    </tr>
+                    <tr>
+                        <td>Row2 cell1</td>
+                        <td>Row2 cell2</td>
+                    </tr>
+                    {tableContent}
+                </tbody>
             </table>
             <div>
                 <button onClick={addRowBtn}>Add Row</button>

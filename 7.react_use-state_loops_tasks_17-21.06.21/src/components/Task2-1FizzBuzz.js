@@ -4,13 +4,13 @@ function FizzBuzz() {
 
     for (let i = 1; i < 101; i++) {
         if (i % 2 === 0 && i % 3 === 0) {
-            resultArray.push(<li> - FizzBuzz</li>);
+            resultArray.push(<li key={i}> - FizzBuzz</li>);
         } else if (i % 3 === 0) {
-            resultArray.push(<li> - Buzz</li>);
+            resultArray.push(<li key={i}> - Buzz</li>);
         } else if (i % 2 === 0) {
-            resultArray.push(<li> - Fizz</li>);
+            resultArray.push(<li key={i}> - Fizz</li>);
         } else {
-            resultArray.push(<li> - {i}</li>);
+            resultArray.push(<li key={i}> - {i}</li>);
         }
     }
 

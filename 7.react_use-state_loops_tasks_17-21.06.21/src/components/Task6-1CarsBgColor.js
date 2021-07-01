@@ -49,3 +49,36 @@ function CarBgChangeColor() {
 }
 
 export default CarBgChangeColor;
+
+// Janis's version
+
+// function Task6() {
+//     const cars = ['vaz', 'gaz', 'zaz', 'maz', 'bmw'];
+//     const [specialCarName, setSpecialCarName] = useState('');
+
+//     const updateSpecialCarName = (event) => {
+//         setSpecialCarName(event.target.value);
+//     }
+
+//     const carsElements = cars.map((car, index) => {
+//         // let bgColor = 'none';
+//         // if (car === specialCarName) {
+//         //     bgColor = 'red';
+//         // }
+//         const bgColor = car === specialCarName ? 'red' : 'none';
+        
+//         return <li key={index} style={{background: bgColor}}>{car}</li>
+//     })
+
+//     return (
+//         <div>
+//             <h1>Task 6</h1>
+//             <ul>
+//                 {carsElements}
+//             </ul>
+//             <input value={specialCarName} onChange={updateSpecialCarName} />
+//         </div>
+//     )
+// }
+
+// export default Task6;
