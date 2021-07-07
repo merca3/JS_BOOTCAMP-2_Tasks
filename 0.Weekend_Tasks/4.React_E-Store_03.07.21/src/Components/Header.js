@@ -10,7 +10,7 @@ function Header() {
         setMainMenuCollapsed(!mainMenuCollapsed);
     }
 
-    let mainMenuClasses = 'collapse navbar-collapse d-flex justify-content-end';
+    let mainMenuClasses = 'collapse navbar-collapse';
     if (!mainMenuCollapsed) {
         mainMenuClasses += ' show';
     }
@@ -25,7 +25,7 @@ function Header() {
             <nav className="navbar navbar-expand-lg navbar-light text-dark bg-info">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand mx-3" to="/">
-                        <img className="img-fluid" src={Logo} alt="logo" style={{width: '50px'}}/>
+                        <img className="img-fluid" src={Logo} alt="logo" style={{width: '60px'}}/>
                     </NavLink>
                     <button onClick={toggleMainMenu} className={menuTogglerBtnClasses} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

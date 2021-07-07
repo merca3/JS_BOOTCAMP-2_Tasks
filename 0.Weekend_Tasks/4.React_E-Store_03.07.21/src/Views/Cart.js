@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ProductsCart from '../Components/ProductsCart';
@@ -27,16 +26,6 @@ function Cart() {
                     <SummaryCart />
                 </TabPanel>
             </Tabs>
-            <div className="row justify-content-end">
-                <div className="col-6"></div>
-                <div className="col">
-                    <h3>Total To Pay: <button className="btn btn-info btn-lg"><span id="total-pay">51.94</span><span>
-                        $</span></button></h3>
-                </div>
-                <div className="col">
-                    <button className="btn btn-info btn-lg">Continue to Checkout</button>
-                </div>
-            </div>
         </div>
     )
 }

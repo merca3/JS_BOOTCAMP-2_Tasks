@@ -13,7 +13,7 @@ function Categories() {
             <h2 className="my-3">Categories:</h2>
             <div className="row mb-2 text-center">
                 <div className="col border mx-1">
-                    <div className="row p-2">
+                    <div className="row p-2 align-items-center">
                         <div className="col">
                             <img className='img-fluid' src={Toy1} alt="" />
                         </div>
@@ -25,7 +25,7 @@ function Categories() {
                     </div>
                 </div>
                 <div className="col border mx-1">
-                    <div className="row p-2">
+                    <div className="row p-2 align-items-center">
                         <div className="col">
                             <img className='img-fluid' src={Toy2} alt="" />
                         </div>
@@ -37,9 +37,9 @@ function Categories() {
                     </div>
                 </div>
             </div>
-            <div className="row mb-2">
+            <div className="row mb-2 text-center">
                 <div className="col border mx-1">
-                    <div className="row p-2">
+                    <div className="row p-2 align-items-center">
                         <div className="col">
                             <img className='img-fluid' src={Toy3} alt="" />
                         </div>
@@ -51,7 +51,7 @@ function Categories() {
                     </div>
                 </div>
                 <div className="col border mx-1">
-                    <div className="row p-2">
+                    <div className="row p-2 align-items-center">
                         <div className="col">
                             <img className='img-fluid' src={Toy4} alt="" />
                         </div>
@@ -63,9 +63,9 @@ function Categories() {
                     </div>
                 </div>
             </div>
-            <div className="row mb-2">
+            <div className="row mb-2 text-center">
                 <div className="col border mx-1">
-                    <div className="row p-2">
+                    <div className="row p-2 align-items-center">
                         <div className="col">
                             <img className='img-fluid' src={Toy5} alt="" />
                         </div>
@@ -77,7 +77,7 @@ function Categories() {
                     </div>
                 </div>
                 <div className="col border mx-1">
-                    <div className="row p-2">
+                    <div className="row p-2 align-items-center">
                         <div className="col">
                             <img className='img-fluid' src={Toy6} alt="" />
                         </div>
