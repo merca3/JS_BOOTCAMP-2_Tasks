@@ -21,8 +21,7 @@ function ProductsCart() {
     
     const addItem = () => {
         setAmountProduct1(amountProduct1 + 1);
-        result = (totalToPay + products[0].price).toFixed(2);
-        setTotalToPay(result);
+        setTotalToPay(result.toFixed(2));
         }
     const minusItem = () => {
         if (amountProduct1 > 1) {
@@ -31,7 +30,8 @@ function ProductsCart() {
     }
 
     const productsDisplayed = products.map(product => {
-        // result += product.amount * product.price;
+        
+        result += product.amount * product.price;
         return (
             <div className="row my-3 border rounded p-2 align-items-center">
                 <div className="col">
