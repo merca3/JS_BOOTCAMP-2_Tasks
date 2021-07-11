@@ -1,16 +1,22 @@
-import ShippingAddress from "./ShippingAddress";
-import BillingAddress from "./BillingAddress";
+function AddressCart({ shipAdd, setShipAdd, billAdd, setBillAdd }) {
 
-function AddressCart() {
+    const getShippingAddress = (event) => {
+        setShipAdd(event.target.value)
+    }
+    const getBillingAddress = (event) => {
+        setBillAdd(event.target.value)
+    }
 
     return (
         <div className="container mb-5">
             <div className="row">
                 <div className="col">
-                    <ShippingAddress />
+                    <h5>Shipping Address</h5>
+                    <textarea className="form-control" cols="60" rows="10" value={shipAdd} onChange={getShippingAddress}></textarea>
                 </div>
                 <div className="col">
-                    <BillingAddress />
+                    <h5>Billing Address</h5>
+                    <textarea className="form-control" cols="60" rows="10" value={billAdd} onChange={getBillingAddress}></textarea>
                 </div>
             </div>
         </div>

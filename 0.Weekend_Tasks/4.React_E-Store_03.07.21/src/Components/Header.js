@@ -10,7 +10,7 @@ function Header() {
         setMainMenuCollapsed(!mainMenuCollapsed);
     }
 
-    let mainMenuClasses = 'collapse navbar-collapse';
+    let mainMenuClasses = 'collapse navbar-collapse flex-row-reverse';
     if (!mainMenuCollapsed) {
         mainMenuClasses += ' show';
     }

@@ -2,14 +2,14 @@ import { NavLink } from 'react-router-dom';
 import Toy1 from '../Images/toy1.jpg';
 import Toy2 from '../Images/toy2.jpeg';
 import Toy3 from '../Images/toy3.jpeg';
-import Toy4 from '../Images/toy4.jpg';
-import Toy5 from '../Images/toy5.jpg';
-import Toy6 from '../Images/toy6.jpg';
+import Carousel1 from '../Images/carousel1.jpg';
+import Carousel2 from '../Images/carousel2.jpg';
+import Carousel3 from '../Images/carousel3.jpg';
 
 function Home() {
 
     return (
-        <div className="container text-center mb-5">
+        <div className="container text-center mb-5 mt-2">
             <div className="row">
                 <div className="col">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -20,13 +20,13 @@ function Home() {
                         </div>
                         <div className="carousel-inner">
                             <div class="carousel-item active">
-                                <img src={Toy4} class="d-block w-100" alt="..." />
+                                <img src={Carousel3} class="d-block w-100" alt="..." />
                             </div>
                             <div class="carousel-item">
-                                <img src={Toy5} class="d-block w-100" alt="..." />
+                                <img src={Carousel2} class="d-block w-100" alt="..." />
                             </div>
                             <div class="carousel-item">
-                                <img src={Toy6} class="d-block w-100" alt="..." />
+                                <img src={Carousel1} class="d-block w-100" alt="..." />
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -41,40 +41,34 @@ function Home() {
                 </div>
             </div>
 
-            <div className="row">
-                <div className="col mx-1">
-                    <div className="row">
-                        <div className="col card">
-                            <img className='img-fluid' src={Toy1} alt="Totoro" />
-                            <div className="card-body">
-                                <h5 className="card-title">Totoro</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <NavLink to="/categories" className="btn btn-info">Shop</NavLink>
-                            </div>
+            <div className="row row-cols-1 row-cols-md-3">
+                <div className="col my-2">
+                    <div className="card h-100">
+                        <img className='img-fluid' src={Toy1} alt="Totoro" />
+                        <div className="card-body">
+                            <h5 className="card-title">Totoro</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <NavLink to="/categories" className="btn btn-info">Shop</NavLink>
                         </div>
                     </div>
                 </div>
-                <div className="col mx-1">
-                    <div className="row">
-                        <div className="col card">
-                            <img className='img-fluid' src={Toy2} alt="SpiritedAway" />
-                            <div className="card-body">
-                                <h5 className="card-title">Spirited Away</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <NavLink to="/categories" className="btn btn-info">Shop</NavLink>
-                            </div>
+                <div className="col my-2">
+                    <div className="card h-100">
+                        <img className='img-fluid' src={Toy2} alt="SpiritedAway" />
+                        <div className="card-body">
+                            <h5 className="card-title">Spirited Away</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <NavLink to="/categories" className="btn btn-info">Shop</NavLink>
                         </div>
                     </div>
                 </div>
-                <div className="col mx-1 ">
-                    <div className="row">
-                        <div className="col card">
-                            <img className='img-fluid' src={Toy3} alt="HowlsMovingCastle" />
-                            <div className="card-body">
-                                <h5 className="card-title">Howl's Moving Castle</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <NavLink to="/categories" className="btn btn-info">Shop</NavLink>
-                            </div>
+                <div className="col my-2">
+                    <div className="card h-100">
+                        <img className='img-fluid' src={Toy3} alt="HowlsMovingCastle" />
+                        <div className="card-body">
+                            <h5 className="card-title">Howl's Moving Castle</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <NavLink to="/categories" className="btn btn-info align-self-end">Shop</NavLink>
                         </div>
                     </div>
                 </div>
