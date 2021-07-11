@@ -1,4 +1,10 @@
-function SummaryCart({ products, shipAdd, billAdd, total }) {
+function SummaryCart({ products, shipAdd, billAdd, setShipAdd, setBillAdd}) {
+    if (shipAdd === '') {
+        setShipAdd('Please fill in Shipping Address!')
+    }
+    if (billAdd === '') {
+        setBillAdd('Please fill in Billing Address!')
+    }
 
     const productsToDisplay = products.map(product => {
 

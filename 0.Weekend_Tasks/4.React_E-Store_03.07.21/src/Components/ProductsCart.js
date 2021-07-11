@@ -13,7 +13,7 @@ function ProductsCart({ products, setTotal, changeAmount, remove }) {
             <div className="row my-3 border rounded p-2 align-items-center" key={index}>
                 <div className="col">
                     <NavLink to="/categories/category1/product1">
-                        <img className="img-fluid rounded" src={product.img} alt="" />
+                        <img className="img-fluid rounded" src={product.img} style={{ height: '100px' }} alt="" />
                     </NavLink>
                 </div>
                 <div className="col">

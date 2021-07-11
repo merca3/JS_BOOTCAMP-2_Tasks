@@ -61,7 +61,7 @@ function Cart() {
                     <AddressCart shipAdd={shippingAddress} setShipAdd={setShippingAddress} billAdd={billingAddress} setBillAdd={setBillingAddress} />
                 </TabPanel>
                 <TabPanel>
-                    <SummaryCart products={products} shipAdd={shippingAddress} billAdd={billingAddress} total={totalToPay} />
+                    <SummaryCart products={products} shipAdd={shippingAddress} setShipAdd={setShippingAddress} billAdd={billingAddress} setBillAdd={setBillingAddress} total={totalToPay} />
                 </TabPanel>
             </Tabs>
             <div className="row justify-content-end">
